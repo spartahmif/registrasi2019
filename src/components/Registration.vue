@@ -21,6 +21,9 @@
                                 <EmergencyContact v-on:previous="go_back" v-on:proceed="ec_proceed"></EmergencyContact>
                             </v-tab-item>
                             <v-tab-item :transition="false" :reverse-transition="false">
+                                <Preferences v-on:previous="go_back" v-on:proceed="preference_proceed"></Preferences>
+                            </v-tab-item>
+                            <v-tab-item :transition="false" :reverse-transition="false">
                                 <InformationConsent v-on:previous="go_back" v-on:proceed="consent_proceed"></InformationConsent>
                             </v-tab-item>
                             <v-tab-item :transition="false" :reverse-transition="false">
@@ -42,9 +45,10 @@
     import EmergencyContact from "./RegistrationPartials/EmergencyContact";
     import InformationConsent from "./RegistrationPartials/InformationConsent";
     import Finished from "./RegistrationPartials/Finished";
+    import Preferences from "./RegistrationPartials/Preferences";
     export default {
         name: "Registration",
-        components: {Finished, InformationConsent, EmergencyContact, Medic, Contact, Biodata, Welcome},
+        components: {Preferences, Finished, InformationConsent, EmergencyContact, Medic, Contact, Biodata, Welcome},
         data() {
             return {
                 tab: 0,
@@ -75,9 +79,13 @@
                 this.data = {...this.data, ...data};
                 this.tab = 5;
             },
-            consent_proceed(data) {
+            preference_proceed(data) {
                 this.data = {...this.data, ...data};
                 this.tab = 6;
+            },
+            consent_proceed(data) {
+                this.data = {...this.data, ...data};
+                this.tab = 7;
             }
         }
     }

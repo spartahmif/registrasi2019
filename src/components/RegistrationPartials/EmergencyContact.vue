@@ -8,7 +8,7 @@
         </div>
         <div class="pl-4 pr-4 pt-1 pb-4" align="left">
             <div>
-                <span class="headline font-weight-bold">Kontak darurat</span> <span class="grey--text ml-2">4/5</span>
+                <span class="headline font-weight-bold">Kontak darurat</span> <span class="grey--text ml-2">4/6</span>
             </div>
             <p class="mt-1 grey--text text--darken-1">Kami perlu informasi ini agar kamu aman saat keberjalanan SPARTA</p>
 

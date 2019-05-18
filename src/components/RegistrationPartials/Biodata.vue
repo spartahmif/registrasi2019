@@ -8,7 +8,7 @@
         </div>
         <div class="pl-4 pr-4 pt-1 pb-4" align="left">
             <div>
-                <span class="headline font-weight-bold">Data diri</span> <span class="grey--text ml-2">1/5</span>
+                <span class="headline font-weight-bold">Data diri</span> <span class="grey--text ml-2">1/6</span>
             </div>
             <p class="mt-1 grey--text text--darken-1">Isi data diri kamu dengan jujur ya..</p>
 

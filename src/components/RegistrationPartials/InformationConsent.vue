@@ -8,7 +8,7 @@
         </div>
         <div class="pl-4 pr-4 pt-1 pb-4" align="left">
             <div>
-                <span class="headline font-weight-bold">Persetujuan Penyebaran Data</span> <span class="grey--text ml-2">5/5</span>
+                <span class="headline font-weight-bold">Persetujuan Penyebaran Data</span> <span class="grey--text ml-2">6/6</span>
             </div>
             <p class="mt-3">Sebagai informasi, banyak sekali perusahaan-perusahaan eksternal yang sangat antusias untuk bekerja sama dengan HMIF mulai dari membuat seminar hingga membuka lowongan pekerjaan.</p>
             <p>HMIF mencoba memfasilitasi hal tersebut dengan mendata informasi kontak anggotanya dan memberikannya kepada pihak-pihak tersebut. Di sisi lain, informasi kontak merupakan data pribadi yang harus dijaga kerahasiaannya.</p>
