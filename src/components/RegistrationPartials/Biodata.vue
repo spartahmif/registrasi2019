@@ -32,13 +32,14 @@
 </template>
 
 <script>
+    import stdlist from '../../assets/data/stei18';
     const validation_rules = require('../../validation_rules');
     export default {
         name: "Biodata",
+        props: ["nim"],
         data() {
             return {
                 validation_rules: validation_rules,
-                name: '',
                 nickname: '',
                 gender: null,
                 birth_place: '',
@@ -48,6 +49,11 @@
                     {text: 'Laki-laki', value: 0},
                     {text: 'Perempuan', value: 1}
                 ]
+            }
+        },
+        computed: {
+            name() {
+                return stdlist[this.nim] || '';
             }
         },
         methods: {

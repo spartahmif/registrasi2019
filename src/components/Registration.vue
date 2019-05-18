@@ -9,7 +9,7 @@
                                 <Welcome v-on:proceed="welcome_proceed"></Welcome>
                             </v-tab-item>
                             <v-tab-item :transition="false" :reverse-transition="false">
-                                <Biodata v-on:previous="go_back" v-on:proceed="biodata_proceed"></Biodata>
+                                <Biodata v-on:previous="go_back" v-on:proceed="biodata_proceed" :nim="data.nim"></Biodata>
                             </v-tab-item>
                             <v-tab-item :transition="false" :reverse-transition="false">
                                 <Contact v-on:previous="go_back" v-on:proceed="contact_proceed"></Contact>
