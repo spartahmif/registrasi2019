@@ -34,6 +34,24 @@
                 </div>
             </v-flex>
         </v-layout>
+        <v-dialog v-model="dialog" persistent width="300">
+            <v-card color="primary">
+                <v-card-text>
+                    Harap tunggu, kami sedang mempersiapkan keajaiban osjur..
+                    <v-progress-linear
+                            indeterminate
+                            color="black"
+                            class="mb-0"
+                    ></v-progress-linear>
+                </v-card-text>
+            </v-card>
+        </v-dialog>
+        <v-snackbar v-model="snackbar" top>
+            {{ snackbar_text }}
+            <v-btn color="pink" flat @click="snackbar = false">
+                Close
+            </v-btn>
+        </v-snackbar>
     </v-container>
 </template>
 
@@ -46,13 +64,20 @@
     import InformationConsent from "./RegistrationPartials/InformationConsent";
     import Finished from "./RegistrationPartials/Finished";
     import Preferences from "./RegistrationPartials/Preferences";
+
+    const axios = require('axios');
+    const BASE_URL = 'https://regissparta2019.herokuapp.com';
+
     export default {
         name: "Registration",
         components: {Preferences, Finished, InformationConsent, EmergencyContact, Medic, Contact, Biodata, Welcome},
         data() {
             return {
                 tab: 0,
-                data: {}
+                data: {},
+                dialog: false,
+                snackbar: false,
+                snackbar_text: ''
             }
         },
         methods: {
@@ -85,8 +110,24 @@
             },
             consent_proceed(data) {
                 this.data = {...this.data, ...data};
-                this.tab = 7;
-                console.log(JSON.stringify(this.data, null, 4));
+                this.dialog = true;
+                this.submit_form(this.data).then(() => {
+                    this.dialog = false;
+                    this.tab = 7;
+                }).catch((e) => {
+                    this.dialog = false;
+                    this.show_snackbar("Wah servernya lagi ngambek, coba lagi ya :)");
+                    console.log(e);
+                })
+            },
+            submit_form: async function(data) {
+                let response = await axios.post(`${BASE_URL}/api/v1/students/`, data);
+                if(response.status !== 200)
+                    throw response.data;
+            },
+            show_snackbar(text) {
+                this.snackbar = true;
+                this.snackbar_text = text;
             }
         }
     }
