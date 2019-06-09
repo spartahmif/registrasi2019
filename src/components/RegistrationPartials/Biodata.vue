@@ -52,8 +52,13 @@
             }
         },
         computed: {
-            name() {
-                return stdlist[this.nim] || '';
+            name: {
+                get() {
+                    return stdlist[this.nim] || '';
+                },
+                set(value) {
+                    // Stub
+                }
             }
         },
         methods: {

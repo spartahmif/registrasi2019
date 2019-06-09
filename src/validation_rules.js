@@ -3,6 +3,9 @@ module.exports = {
         v => !!v || 'NIM tidak boleh kosong',
         v => /16518\d{3}/.test(v) || 'Masukkan NIM TPB STEI 2018'
     ],
+    major: [
+        v => !!v || 'Program studi harus diisi'
+    ],
     name: [
         v => !!v || 'Nama tidak boleh kosong',
         v => /([A-Z][a-zA-Z\-'.]*\s*)+/.test(v) || 'Kapitalisasi harus benar'

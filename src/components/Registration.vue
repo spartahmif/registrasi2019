@@ -86,6 +86,7 @@
             consent_proceed(data) {
                 this.data = {...this.data, ...data};
                 this.tab = 7;
+                console.log(JSON.stringify(this.data, null, 4));
             }
         }
     }

@@ -11,6 +11,15 @@
             </p>
 
             <v-text-field label="NIM TPB" v-model="nim" :rules="validation_rules.nim" class="mt-4"></v-text-field>
+            <v-select
+                    v-model="major"
+                    :items="majors"
+                    :rules="validation_rules.major"
+                    item-text="text"
+                    item-value="value"
+                    label="Program Studi"
+                    return-object
+            ></v-select>
 
             <v-btn ma-0 depressed block style="text-transform: none; color: black" color="primary" class="font-weight-bold" type="submit">Lanjutkan</v-btn>
         </div>
@@ -25,13 +34,21 @@
         data() {
             return {
                 nim: '',
-                validation_rules: validation_rules
+                major: null,
+                validation_rules: validation_rules,
+                majors: [
+                    {text: 'Teknik Informatika', value: 135},
+                    {text: 'Sistem dan Teknologi Informasi', value: 182}
+                ]
             }
         },
         methods: {
             proceed() {
                 if(!this.$refs.form.validate()) return;
-                this.$emit('proceed', {nim: this.nim});
+                this.$emit('proceed', {
+                    nim: this.nim,
+                    major: this.major.value
+                });
             }
         }
     }
