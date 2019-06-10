@@ -121,13 +121,16 @@
                 })
             },
             submit_form: async function(data) {
-                let response = await axios.post(`${BASE_URL}/api/v1/students/`, data);
-                if(response.status !== 200)
+                let response = await axios.post(`${BASE_URL}/api/v1/students/add/`, data);
+                if(!this.status_code_allowed(response.status))
                     throw response.data;
             },
             show_snackbar(text) {
                 this.snackbar = true;
                 this.snackbar_text = text;
+            },
+            status_code_allowed(status) {
+                return status === 200 || status === 201;
             }
         }
     }

@@ -39,6 +39,7 @@
         props: ["nim"],
         data() {
             return {
+                name: '',
                 validation_rules: validation_rules,
                 nickname: '',
                 gender: null,
@@ -51,14 +52,9 @@
                 ]
             }
         },
-        computed: {
-            name: {
-                get() {
-                    return stdlist[this.nim] || '';
-                },
-                set(value) {
-                    // Stub
-                }
+        watch: {
+            nim: function(newVal) { // watch it
+                this.name = stdlist[newVal] || '';
             }
         },
         methods: {

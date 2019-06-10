@@ -1,18 +1,16 @@
 <template>
   <v-app>
     <v-content>
-      <Registration/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import Registration from "./components/Registration";
 
 export default {
   name: 'App',
   components: {
-      Registration,
   },
   data () {
     return {
