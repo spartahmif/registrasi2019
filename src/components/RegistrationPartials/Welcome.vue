@@ -1,7 +1,7 @@
 <template>
     <v-form @submit.prevent="proceed" ref="form">
         <div class="pa-4" align="left">
-            <v-img :src="require('../../assets/spartalogo.png')" width="80"></v-img>
+            <v-img :src="require('../../assets/logo-sparta18.svg')" width="80"></v-img>
             <div class="display-1 font-weight-bold" style="margin-top: 24px">Selamat datang!</div>
             <p class="mt-3">
                 Kami ucapkan selamat dan sukses untuk kalian yang diterima pada program studi Teknik Informatika dan Sistem dan Teknologi Informasi angkatan 2018!

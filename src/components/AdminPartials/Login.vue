@@ -4,7 +4,7 @@
             <v-flex>
                 <div align="center">
                     <v-card id="login-box" elevation="4" class="pa-3">
-                        <v-img :src="require('../../assets/spartalogo.png')" width="80"></v-img>
+                        <v-img :src="require('../../assets/logo-sparta18.svg')" width="80"></v-img>
                         <div class="headline font-weight-bold" style="margin-top: 24px; margin-bottom: 24px;">Hackerman Login</div>
                         <v-text-field label="Username" v-model="username"></v-text-field>
                         <v-text-field label="Password" type="password" v-model="password"></v-text-field>
