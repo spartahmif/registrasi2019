@@ -57,7 +57,7 @@
             </v-list>
 
             <v-divider></v-divider>
-            <v-textarea box v-model="materi_others" label="Lainnya" class="mt-4" hint="Saran materi lain mungkin?" persistent-hint height="80"></v-textarea>
+            <v-textarea box v-model="materi_others" label="Lainnya" class="mt-4" hint="Saran materi lain mungkin?" persistent-hint height="80" counter="100"  :rules="validation_rules.materi_others"></v-textarea>
 
             <v-btn depressed block style="text-transform: none; color: black" color="primary" class="font-weight-bold mt-3" type="submit">Lanjutkan</v-btn>
         </div>
@@ -65,10 +65,13 @@
 </template>
 
 <script>
+    const validation_rules = require('../../validation_rules');
+
     export default {
         name: "Preferences",
         data() {
             return {
+                validation_rules: validation_rules,
                 chk_berkemahasiswaan: false,
                 chk_karya: false,
                 chk_komunikasi: false,

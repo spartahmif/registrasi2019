@@ -19,7 +19,7 @@
                     :rules="validation_rules.blood_type"
             ></v-select>
 
-            <v-textarea label="Penyakit atau Riwayat Penyakit" v-model="disease"></v-textarea>
+            <v-textarea label="Penyakit atau Riwayat Penyakit" v-model="disease" counter="100"  :rules="validation_rules.disease"></v-textarea>
 
             <v-btn depressed block style="text-transform: none; color: black" color="primary" class="font-weight-bold mt-3" type="submit">Lanjutkan</v-btn>
         </div>

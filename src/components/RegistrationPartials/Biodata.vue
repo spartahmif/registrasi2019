@@ -12,8 +12,8 @@
             </div>
             <p class="mt-1 grey--text text--darken-1">Isi data diri kamu dengan jujur ya..</p>
 
-            <v-text-field label="Nama Lengkap" v-model="name" :rules="validation_rules.name" hint="Tulis dengan huruf kapital di awal kata dan kapitalisasi yang sesuai"></v-text-field>
-            <v-text-field label="Nama Panggilan" v-model="nickname" :rules="validation_rules.name"></v-text-field>
+            <v-text-field label="Nama Lengkap" v-model="name" :rules="validation_rules.name" hint="Tulis dengan huruf kapital di awal kata dan kapitalisasi yang sesuai" counter="50"></v-text-field>
+            <v-text-field label="Nama Panggilan" v-model="nickname" :rules="validation_rules.nickname" counter="15"></v-text-field>
             <v-select
                     v-model="gender"
                     :items="genders"
@@ -23,7 +23,7 @@
                     label="Jenis Kelamin"
                     return-object
             ></v-select>
-            <v-text-field label="Tempat Lahir" :rules="validation_rules.bp" v-model="birth_place"></v-text-field>
+            <v-text-field label="Tempat Lahir" :rules="validation_rules.bp" v-model="birth_place" counter="30"></v-text-field>
             <v-text-field label="Tanggal Lahir" :rules="validation_rules.bd" v-model="birth_date" mask="##/##/####" placeholder="dd/mm/yyyy"></v-text-field>
 
             <v-btn depressed block style="text-transform: none; color: black" color="primary" class="font-weight-bold mt-3" :loading="loading" type="submit">Lanjutkan</v-btn>

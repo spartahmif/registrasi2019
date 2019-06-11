@@ -12,9 +12,9 @@
             </div>
             <p class="mt-1 grey--text text--darken-1">Kami perlu informasi ini agar kamu aman saat keberjalanan SPARTA</p>
 
-            <v-text-field label="Nama Wali" v-model="guardian_name" :rules="validation_rules.name"></v-text-field>
-            <v-text-field label="Hubungan Wali" v-model="guardian_rel" :rules="validation_rules.hub_wali" hint="Misalnya Ayah/Ibu/Saudara kandung/lainnya"></v-text-field>
-            <v-text-field label="Nomor Telepon Wali" v-model="guardian_mobile" :rules="validation_rules.mobile"></v-text-field>
+            <v-text-field label="Nama Wali" v-model="guardian_name" :rules="validation_rules.name" counter="50"></v-text-field>
+            <v-text-field label="Hubungan Wali" v-model="guardian_rel" :rules="validation_rules.hub_wali" hint="Misalnya Ayah/Ibu/Saudara kandung/lainnya" counter="20"></v-text-field>
+            <v-text-field label="Nomor Telepon Wali" v-model="guardian_mobile" :rules="validation_rules.mobile" counter="20"></v-text-field>
 
             <v-btn depressed block style="text-transform: none; color: black" color="primary" class="font-weight-bold mt-3" type="submit">Lanjutkan</v-btn>
         </div>
