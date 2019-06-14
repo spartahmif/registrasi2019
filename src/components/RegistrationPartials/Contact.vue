@@ -12,7 +12,7 @@
             </div>
             <p class="mt-1 grey--text text--darken-1">Isi data diri kamu dengan jujur ya..</p>
 
-            <v-text-field label="Alamat email" :rules="validation_rules.email" v-model="email" counter="30"></v-text-field>
+            <v-text-field label="Alamat email" :rules="validation_rules.email" v-model="email" counter="40"></v-text-field>
             <v-text-field label="ID LINE" :rules="validation_rules.line_id" v-model="line" counter="30"></v-text-field>
             <v-text-field label="Nomor ponsel" :rules="validation_rules.mobile" v-model="mobile" counter="20"></v-text-field>
             <v-text-field label="Alamat Rumah" :rules="validation_rules.address" v-model="address_home" counter="100"></v-text-field>

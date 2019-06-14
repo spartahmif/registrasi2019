@@ -19,7 +19,7 @@ module.exports = {
     email: [
         v => !!v || 'Email harus diisi',
         v => /\S+@\S+\.\S+/.test(v) || 'Format alamat e-mail salah',
-        v => v.length <= 30 || 'Maksimum 30 karakter'
+        v => v.length <= 40 || 'Maksimum 40 karakter'
     ],
     mobile: [
         v => !!v || 'Nomor telepon harus diisi',
