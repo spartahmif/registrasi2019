@@ -6,7 +6,7 @@ import VueRouter from 'vue-router'
 
 // Setup routes
 const routes = [
-    {path: "/", component: () => import('./components/Registration')},
+    {path: "/", component: () => import('./components/Closed')},
     {path: "/admin", component: () => import('./components/Admin')},
 ];
 
